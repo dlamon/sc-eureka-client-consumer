@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-client-consumer
+server:
+  port: 8180
+eureka:
+  instance:
+    metadata-map:
+      zone: sc
+  client:
+    region: chongqing
+    availability-zones:
+      chongqing: sc,tc,zb
+    service-url:
+      sc: http://eureka-sc:8761/eureka/
+      tc: http://eureka-tc:8762/eureka/
+      zb: http://eureka-zb:8763/eureka/
